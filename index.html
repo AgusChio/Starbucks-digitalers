@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="shortcut icon" href="./assets/image/starbucks-logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar | navbar-expand-lg | p-4 | fixed-top">
+            <div class="container-fluid | w-100 | d-flex">
+                <div class="container-navbar">
+                    <a class="navbar-brand | fw-semibold | fs-3" href="./index.html">
+                        <img src="/assets/image/starbucks-logo.png" alt="Logo" width="60" height="60"
+                            class="starbucks-logo">
+                        Starbucks
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse | navbar-collapse | justify-content-center | justify-content-around"
+                    id="navbarNav">
+                    <ul class="navbar-nav | w-50 | fs-5 | fw-bold | d-flex | justify-content-center">
+                        <li class="nav-item | me-2">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item | me-2">
+                            <a class="nav-link" href="./pages/about-us/about-us.html">Our History</a>
+                        </li>
+                        <li class="nav-item | me-2">
+                            <a class="nav-link" href="./pages/contact/contact.html">Contact</a>
+                        </li>
+                        <div class="container-button-singup | ms-2 | me-2 | fw-semibold">
+                            <a class="button-signUp | p-2 | text-decoration-none" href="./pages/register/register.html">Sign Up</a>
+                        </div>
+                    </ul>
+
+                    <div class="container-user-basket | d-flex | w-25 | ms-4 | fw-semibold | justify-content-end">
+                        <a href="#"
+                            class="d-flex | justify-content-center | align-items-center | flex-column | text-decoration-none | ancor-user"><span
+                                class="iconify" data-icon="mingcute:user-4-line"></span>John Doe</a>
+                        <a href="#"
+                            class="d-flex | justify-content-center | align-items-center | flex-column | ms-4 | text-decoration-none | ancor-basket"><span
+                                class="iconify" data-icon="emojione-monotone:shopping-cart"></span>Your Basket</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="mt-5">
+            <div id="carouselStarbucks" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselStarbucks" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselStarbucks" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselStarbucks" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/image/img-carousel-1.png" class="d-block w-100" alt="Carousel image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/image/img-carousel-2.png" class="d-block w-100"
+                            alt="Background image see with an aluminum coffee capsule">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/image/img-carousel-3.png" class="d-block w-100"
+                            alt="Image of a table with a coffee cup">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselStarbucks"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselStarbucks"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="pb-5">
+        <section class="container-menu | w-100">
+            <img src="./assets/image/background-home.png" alt="Background-gout" class="w-100 | bg-gout">
+            <header class="title-home | w-100 | text-center | fs-1 | fw-semibold | text-uppercase | pt-3">Enjoy the Taste of
+                Starbucks from the Comfort of Your Home</header>
+            <h2 class="title-coffee | m-auto | mt-5 | fs-1 | fw-regular">Our hot coffees</h2>
+            <div class="container-all-cards | d-flex | justify-content-between">
+                <div class="w-100">
+                    <div class="container-cards | d-flex | justify-content-center | mt-5 | flex-wrap">
+                        <div class="card-hot-coffee ">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">White hot chocolate</h2>
+                                <p class="fs-6">A traditional hot chocolate beverage made with white chocolate sauce and steamed milk...</p>
+                                <p class="fs-5 | p-0 | m-0">$10 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/white-hot-chocolate.png" alt="White hot chocolate">
+                        </div>
+                        <div class="card-hot-coffee">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Americano coffee</h2>
+                                <p class="fs-6">Espresso shots topped with hot water create a light layer of crema culminating...</p>
+                                <p class="fs-5 | p-0 | m-0">$7 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/americano-coffee.png" alt="Americano Coffee">
+                        </div>
+                        <div class="card-hot-coffee">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Caramel macchiato</h2>
+                                <p class="fs-6">Freshly steamed milk with vanilla-flavored syrup marked with espresso and topped...</p>
+                                <p class="fs-5 | p-0 | m-0">$12 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/caramel-macchiato.png" alt="Caramel macchiato">
+                        </div>
+                        <div class="card-hot-coffee">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Mocha coffee</h2>
+                                <p class="fs-6">Our rich, full-bodied espresso combined with bittersweet mocha sauce and steamed milk, ...</p>
+                                <p class="fs-5 | p-0 | m-0">$12 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/coffee-mocha.png" alt="Mocha coffee">
+                        </div>
+                        <div class="card-hot-coffee">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Caramel apple spice</h2>
+                                <p class="fs-6">Steamed apple juice complemented with cinnamon syrup, whipped cream and a caramel...</p>
+                                <p class="fs-5 | p-0 | m-0">$15 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/caramel-apple-spice.png" alt="Caramel apple spice">
+                        </div>
+                        <div class="card-hot-coffee">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">White chocolate mocha</h2>
+                                <p class="fs-6">Our signature espresso meets white chocolate sauce and steamed milk, and ...</p>
+                                <p class="fs-5 | p-0 | m-0">$10 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/white-chocolate-mocha.png" alt="White chocolate mocha">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="m-auto | mt-5 | fs-1 | fw-regular | title-coffee">Our Ice coffees</h2>
+            <div class="container-all-cards | d-flex | justify-content-between">
+                <div class="w-100">
+                    <div class="container-cards | d-flex | justify-content-center | mt-5 | flex-wrap">
+                        <div class="card">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Caramel frappuccino</h2>
+                                <p class="fs-6">Caramel syrup meets coffee, milk and ice for a rendezvous in the blender, ...</p>
+                                <p class="fs-5 | p-0 | m-0">$13 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/caramel-frappuccino.png" alt="Caramel frappuccino">
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Caramel ribbon crunch frappuccino</h2>
+                                <p class="fs-6">Buttery caramel syrup blended with coffee, milk and ice,...</p>
+                                <p class="fs-5 | p-0 | m-0">$15 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/caramel-ribbon-crunch-frappuccino.png" alt="Caramel ribbon crunch frappuccino">
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Chocolate java mint frappuccino</h2>
+                                <p class="fs-6">Coffee and flavors of sweet chocolate and refreshing mint blended with rich...</p>
+                                <p class="fs-5 | p-0 | m-0">$10 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/chocolate-java-mint-frappuccino.png" alt="Chocolate java mint frappuccino">
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Java chip frappuccino</h2>
+                                <p class="fs-6">We blend mocha sauce and Frappuccino® chips with coffee, milk and ice,...</p>
+                                <p class="fs-5 | p-0 | m-0">$12 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/java-chip-frappuccino.png" alt="Java chip frappuccino">
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Strawberry creme frappuccino</h2>
+                                <p class="fs-6">Summer's favorite berry is the star of this delicious Frappuccino...</p>
+                                <p class="fs-5 | p-0 | m-0">$10 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/strawberry-creme-frappuccino.png" alt="Strawberry creme frappuccino">
+                        </div>
+                        <div class="card">
+                            <div class="content">
+                                <h2 class="fs-5 | text-start | w-100">Mocha cookie crumble frappuccino</h2>
+                                <p class="fs-6">Frappuccino Roast coffee, mocha sauce and Frappuccino chips blended with milk...</p>
+                                <p class="fs-5 | p-0 | m-0">$13 USD</p>
+                                <p class="fs-6 | p-0 | m-0">August 23, 2023</p>
+                                <div class="w-100 | d-flex | justify-content-between | p-3">
+                                    <a href="#">Read More</a>
+                                    <a href="#">Buy</a>
+                                </div>
+                            </div>
+                            <img src="./assets/image/mocha-cookie-crumble-frappuccino.png" alt="Mocha cookie crumble frappuccino">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-membership | mt-5 | m-auto | p-3 | rounded-4">
+            <header class="text-uppercase | fs-2 | fw-semibold | text-center">Begin part of starbucks rewards is so
+                easy!</header>
+            <div class="w-100 | d-flex | justify-content-center | flex-column ">
+                <p class="text-center | p-2 | fs-5">Follow the 4 steps below.</p>
+                <span class="iconify | w-100 | text-center" data-icon="mingcute:arrow-down-fill" style="color: #065538;"
+                    data-width="30" data-height="30"></span>
+            </div>
+            <div class="container-steps | m-auto | d-flex | flex-wrap | flex-row | justify-content-between | p-3 ">
+                <div class="d-flex | flex-column | w-25 | justify-content-center | align-items-center | mt-3 | steps">
+                    <img src="./assets/image/step1.png" alt="Image Step One" class="image-steps">
+                    <h4 class="fs-4 | fw-bold | mt-4 | mb-4 | w-100 | text-center"> 1/4 </h4>
+                    <div class="container-description-steps | d-flex | flex-column | m-2">
+                        <a class="button-signUp | fs-4 | p-2 | text-decoration-none | text-center | rounded-3 | w-100"
+                            href="./pages/register/register.html">Sign Up</a>
+                    </div>
+                </div>
+                <div class="d-flex | flex-column | w-25 | justify-content-center | align-items-center | mt-3 | steps">
+                    <img src="./assets/image/step2.png" alt="Image Step Two" class="image-steps">
+                    <h4 class="fs-4 | fw-bold | mt-4 | mb-4 | w-100 | text-center"> 2/4 </h4>
+                    <div class="container-description-steps | d-flex | flex-column | m-2">
+                        <p class=" text-center | text-uppercase">Go to your nearest store and activate your starbucks
+                            card.</p>
+                    </div>
+                </div>
+                <div class="d-flex | flex-column | w-25 | justify-content-center | align-items-center | mt-3 | steps">
+                    <img src="./assets/image/step3.png" alt="Image Step Three" class="image-steps">
+                    <h4 class="fs-4 | fw-bold | mt-4 | mb-4 | w-100 | text-center"> 3/4 </h4>
+                    <div class="container-description-steps | d-flex | flex-column | m-2">
+                        <p class="text-center | text-uppercase">Pay with your starbucks card and earn one star for every
+                            $80 consumed.</p>
+                    </div>
+                </div>
+                <div class="d-flex | flex-column | w-25 | justify-content-center | align-items-center | mt-3 | steps">
+                    <img src="./assets/image/step4.png" alt="Image Step Four" class="image-steps">
+                    <h4 class="fs-4 | fw-bold | mt-4 | mb-4 | w-100 | text-center"> 4/4 </h4>
+                    <div class="container-description-steps | d-flex | flex-column | m-2">
+                        <p class="text-center | text-uppercase">Get the benefits.</p>
+                    </div>
+                </div>
+            </div>
+            <span class="iconify | w-100 | text-center" data-icon="mingcute:arrow-down-fill" style="color: #065538;"
+                data-width="30" data-height="30"></span>
+
+            <div class="container-all-levels-membership | d-flex | justify-content-between | justify-content-center | m-auto | mt-4 | pb-5">
+                <div class="level-membership">
+                    <h4 class="text-decoration-underline | text-center">Level Welcome:</h4>
+                    <p class="text-center | paragraph-membership-levels | mt-5">Join Starbucks Rewards™ and enjoy:</p>
+                    <div class="image-membership-1 | rounded-3 | pt-5 | m-auto">
+                        <div class="d-flex | w-75 | m-auto | text-white | pt-3">
+                            <span class="iconify me-2" data-icon="cib:buy-me-a-coffee" data-width="50" data-height="50"></span>
+                            <p class="paragraph-membership text-uppercase">A complementary drink in your birthday month.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-membership">
+                    <h4 class="title-membership-green | text-decoration-underline | text-center">Level Green:</h4>
+                    <p class="text-center | paragraph-membership-levels | mt-5">Accumulate 50 Stars, reach this level and add new benefits:</p>
+                    <div class="image-membership-2 | rounded-3 | pt-5 | m-auto">
+                        <div class=" | d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-green" data-icon="cib:buy-me-a-coffee" data-width="40" data-height="50"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">A complementary drink in your birthday month.</p>
+                        </div>
+                        <div class=" | d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-green" data-icon="game-icons:coffee-mug" data-width="30" data-height="30"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">Coffe refill of the day.</p>
+                        </div>
+                        <div class=" | d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-green" data-icon="cib:buy-me-a-coffee" data-width="40" data-height="50"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">A tall drink for the purchase of coffe beans.</p>
+                        </div>
+                        <div class=" | d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-green" data-icon="solar:star-shine-bold" data-width="30" data-height="30"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">Special offers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-membership">
+                    <h4 class="title-membership-gold | text-decoration-underline | text-center">Level GOLD:</h4>
+                    <p class="text-center | paragraph-membership-levels | mt-5">Accumulate 300 Stars, and live the best Starbucks Rewards™ experience:</p>
+                    <div class="image-membership-3 | rounded-3 | m-auto">
+                        <div class="d-flex | w-75 | m-auto | pt-5">
+                            <span class="iconify | me-2 | icon-level-gold" data-icon="cib:buy-me-a-coffee" data-width="40" data-height="50"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">A complementary drink in your birthday month.</p>
+                        </div>
+                        <div class="d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-gold" data-icon="game-icons:coffee-mug" data-width="30" data-height="30"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">Coffe refill of the day.</p>
+                        </div>
+                        <div class="d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-gold" data-icon="cib:buy-me-a-coffee" data-width="40" data-height="50"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">A tall drink for the purchase of coffe beans.</p>
+                        </div>
+                        <div class="d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-gold" data-icon="solar:star-shine-bold" data-width="30" data-height="30"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">Special offers</p>
+                        </div>
+                        <div class="d-flex | w-75 | m-auto ">
+                            <span class="iconify | me-2 | icon-level-gold" data-icon="cib:buy-me-a-coffee" data-width="40" data-height="50"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">One drink every 100 stars accumulated.</p>
+                        </div>
+                        <div class="d-flex | w-75 | m-auto ">
+                            <span class="iconify  | me-2 | icon-level-gold" data-icon="fa:calendar" data-width="30" data-height="30"></span>
+                            <p class="paragraph-membership | text-uppercase | text-white">Exclusive events for gold members.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center | text-lg-start" style="background-color: #223835; color: #f2eeec;">
+
+        <div class="container | p-4 | pb-0 | mb-3">
+
+            <div class="row">
+
+                <div class="col-md-3 | col-lg-3 | col-xl-3 | mx-auto | mt-3 | text-center">
+                    <h4 class="text-uppercase | mb-4">Hours of Operation</h4>
+
+                    <table class="text-white | m-auto">
+                        <tbody class="font-weight-normal">
+                            <tr class="border-bottom">
+                                <td>Mon - Fri:</td>
+                                <td>09:00 - 23:00</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td>Sat - Sun </td>
+                                <td>10:00 - 20:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-4 | col-lg-3 | col-xl-3 | mx-auto | mt-3">
+                    <h4 class="text-uppercase | mb-4 | font-weight-bold | ms-2">Starbucks</h4>
+                    <img src="./assets/image/starbucks-logo.png" alt="Starbucks Logo" class="logo-footer-starbucks">
+                </div>
+
+                <div class="col-md-3 | col-lg-2 | col-xl-2 | mx-auto | mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold">Follow us on social networks</h5>
+                    <div class="contenedor-sociales d-flex justify-content-center flex-row flex-wrap">
+
+                        <a class="btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | flex-wrap | m-1 | p-2"
+                            href="https://www.facebook.com/" role="button"><span class="iconify"
+                                data-icon="ic:sharp-facebook"></span></a>
+
+                        <a class="btn btn-outline-light btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://www.instagram.com/" role="button"><span class="iconify"
+                                data-icon="prime:instagram"></span></a>
+
+                        <a class="btn btn-outline-light btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://web.whatsapp.com/" role="button"><span class="iconify"
+                                data-icon="ic:round-whatsapp"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center | p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:<a class="text-white">Starbucks - Agustina Chiodini</a>
+        </div>
+    </footer>
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</html>
