@@ -156,7 +156,7 @@ nav {
 
 img.img-carousel {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
     object-fit: fill;
     object-position: center;
 }
@@ -706,7 +706,11 @@ img.profile-photo {
     .title-home {
         padding: 0 0.5rem;
     }
-
+    
+    img.img-carousel {
+        height: 350px;
+    }
+    
     .bg-gout {
         height: 13rem;
         margin-top: -1rem;
@@ -725,6 +729,7 @@ img.profile-photo {
         position: relative;
         width: auto;
         max-width: 700px;
+        margin-bottom: 43px;
         transition: 0.5s;
         align-items: flex-start;
     }
@@ -967,6 +972,6 @@ img.profile-photo {
 
 @media screen and (width > 768px) {
     img.img-carousel {
-        height: 840px;
+        height: 740px;
     }
 }
