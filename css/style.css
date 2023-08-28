@@ -101,6 +101,10 @@ body {
 /* End Header */
 
 /* Start Navbar */
+.active{
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)) !important;
+    color: white !important;
+}
 nav {
     background-color: var(--bg-color) !important;
     width: 100%;
