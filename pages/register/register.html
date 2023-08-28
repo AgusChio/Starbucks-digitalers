@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar | navbar-expand-lg | p-4 | fixed-top">
@@ -31,7 +33,7 @@
                             <a class="nav-link" href="../../index.html">Home</a>
                         </li>
                         <li class="nav-item | me-2">
-                            <a class="nav-link" href="#">Our History</a>
+                            <a class="nav-link" href="../about-us/about-us.html">Our History</a>
                         </li>
                         <li class="nav-item | me-2">
                             <a class="nav-link" href="../contact/contact.html">Contact</a>
@@ -49,44 +51,56 @@
                 </div>
             </div>
         </nav>
-        <div class="container-image-header-register | w-100 | d-flex | flex-column | justify-content-center | align-items-start | text-white | p-5">
-                <h2 class="fw-bold">Register</h2>
-                <p>Sign up, and start living the Starbucks Rewards experience!</p>
+        <div
+            class="container-image-header-register | w-100 | d-flex | flex-column | justify-content-center | align-items-start | text-white | p-5">
+            <h2 class="fw-bold">Register</h2>
+            <p>Sign up, and start living the Starbucks Rewards experience!</p>
         </div>
     </header>
-    
+
     <main class="pb-5">
         <section class="w-100">
             <div class="underline-header | m-auto | pt-5 | pb-1">
-                <header class="fs-1 | fw-bold | text-uppercase ">Please complete the following form</header>
+                <h2 class="fs-1 | fw-bold | text-uppercase ">Please complete the following form</h2>
             </div>
-            
+
             <div class="container-form-img | d-flex | justify-content-center | m-auto |  mt-5">
                 <div class="container-form | text-white ">
                     <form class="w-75 | m-auto | mt-5 | fw-bold">
                         <fieldset class="d-flex | flex-column | mb-3">
                             <label for="fullname">Full Name:</label>
-                            <input type="text" name="fullname" id="fullname" placeholder="John Doe" minlength="6" maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1" required>
+                            <input type="text" name="fullname" id="fullname" placeholder="John Doe" minlength="6"
+                                maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1" required>
                         </fieldset>
-                        
+
                         <fieldset class="d-flex | flex-column | mb-3">
                             <label for="email">Email address:</label>
-                            <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" minlength="6" maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1" required>
+                            <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" minlength="6"
+                                maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1" required>
                         </fieldset>
 
                         <fieldset class="d-flex | flex-column | mb-3">
                             <label for="password">Password:</label>
-                            <input type="password" name="password" id="password" placeholder="********" minlength="6" maxlength="10" class="mt-1 | rounded-2 | border | border-none | p-1" required>
+                            <input type="password" name="password" id="password" placeholder="********" minlength="0"
+                                maxlength="16" class="mt-1 | rounded-2 | border | border-none | p-1" required>
                         </fieldset>
-                        
+
+                        <fieldset class="d-flex | flex-column | mb-3">
+                            <label for="confirmpassword">Confirm Password:</label>
+                            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="********"
+                                minlength="0" maxlength="16" class="mt-1 | rounded-2 | border | border-none | p-1"
+                                required>
+                        </fieldset>
+
                         <fieldset class="d-flex | flex-column | mb-3">
                             <label for="datebirth">Date of birth:</label>
-                            <input type="date" name="datebirth" id="datebirth" class="mt-1 | rounded-2 | border | border-none | p-1" required>
+                            <input type="date" name="datebirth" id="datebirth"
+                                class="mt-1 | rounded-2 | border | border-none | p-1" required>
                         </fieldset>
 
                         <fieldset class="d-flex | flex-column | mb-3">
                             <label for="provincia">Choose your province</label>
-                            <select id="provincia" class="mt-1 | rounded-2 | border | border-none | p-1 | form-select" required>
+                            <select id="provincia" class="mt-1 | rounded-2 | border | border-none | p-1 | form-select">
                                 <option value="1">BUENOS AIRES</option>
                                 <option value="2">CATAMARCA</option>
                                 <option value="5">CHACO</option>
@@ -109,17 +123,18 @@
                                 <option value="20">SANTA FE</option>
                                 <option value="21">SANTIAGO DEL ESTERO</option>
                                 <option value="22">TIERRA DEL FUEGO</option>
-                                <option disabled="true" selected="true" value="">Choose your province</option>
                             </select>
                         </fieldset>
 
                         <fieldset class="d-flex | flex-column">
                             <label for="observations">Observations</label>
-                            <textarea name="observations" id="observations" cols="30" rows="10" minlength="6" maxlength="130" class="mt-1 | rounded-2 | border | border-none | p-1"></textarea>
+                            <textarea name="observations" id="observations" cols="30" rows="10" minlength="6"
+                                maxlength="130" class="mt-1 | rounded-2 | border | border-none | p-1"></textarea>
                         </fieldset>
 
                         <div class="w-100 | d-flex | justify-content-center | mt-4 |  mb-4">
-                            <button type="submit" class="button-register | w-75 | m-auto | p-2 | rounded-3 | fw-bold">Sign Up</button>
+                            <button type="submit"
+                                class="button-register | w-75 | m-auto | p-2 | rounded-3 | fw-bold">Sign Up</button>
                         </div>
                     </form>
                 </div>
@@ -129,7 +144,7 @@
             </div>
         </section>
     </main>
-    
+
 
     <footer class="text-center | text-lg-start" style="background-color: #412d25; color: #f2eeec;">
 
@@ -137,11 +152,10 @@
 
             <div class="row">
 
-                <div class="col-md-3 | col-lg-3 | col-xl-3 | mx-auto | mt-3">
+                <div class="container-hours | col-md-3 | col-lg-3 | col-xl-3 | mx-auto | mt-3 | text-start">
                     <h4 class="text-uppercase | mb-4">Hours of Operation</h4>
-
-                    <table class="text-center | text-white | m-auto">
-                        <tbody class="font-weight-normal | text-start">
+                    <table class="text-white">
+                        <tbody class="font-weight-normal">
                             <tr class="border-bottom">
                                 <td>Mon - Fri:</td>
                                 <td>09:00 - 23:00</td>
@@ -163,17 +177,20 @@
                     <h5 class="text-uppercase mb-4 font-weight-bold">Follow us on social networks</h5>
                     <div class="contenedor-sociales d-flex justify-content-center flex-row flex-wrap">
 
-                        <a class="btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | flex-wrap | m-1 | p-2"
-                            href="https://www.facebook.com/" role="button"><span class="iconify"
-                                data-icon="ic:sharp-facebook"></span></a>
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | flex-wrap | m-1 | p-2"
+                            href="https://www.facebook.com/" role="button">
+                            <span class="iconify" data-icon="ic:sharp-facebook"></span>
+                        </a>
 
-                        <a class="btn btn-outline-light btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
-                            href="https://www.instagram.com/" role="button"><span class="iconify"
-                                data-icon="prime:instagram"></span></a>
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://www.instagram.com/" role="button">
+                            <span class="iconify" data-icon="prime:instagram"></span>
+                        </a>
 
-                        <a class="btn btn-outline-light btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
-                            href="https://web.whatsapp.com/" role="button"><span class="iconify"
-                                data-icon="ic:round-whatsapp"></span></a>
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://web.whatsapp.com/" role="button">
+                            <span class="iconify" data-icon="ic:round-whatsapp"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -189,4 +206,5 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

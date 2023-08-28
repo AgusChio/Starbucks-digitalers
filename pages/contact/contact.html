@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar | navbar-expand-lg | p-4 | fixed-top">
@@ -31,14 +33,15 @@
                             <a class="nav-link" href="../../index.html">Home</a>
                         </li>
                         <li class="nav-item | me-2">
-                            <a class="nav-link" href="#">Our History</a>
+                            <a class="nav-link" href="../about-us/about-us.html">Our History</a>
                         </li>
                         <li class="nav-item | me-2">
                             <a class="nav-link" href="../contact/contact.html">Contact</a>
                         </li>
-                        <div class="container-button-singup | ms-2 | me-2 | fw-semibold">
-                            <a class="button-signUp | p-2 | text-decoration-none" href="../register/register.html">Sign Up</a>
-                        </div>
+                        <li class="container-button-singup | ms-2 | me-2 | fw-semibold">
+                            <a class="button-signUp | p-2 | text-decoration-none" href="../register/register.html">Sign
+                                Up</a>
+                        </li>
                     </ul>
 
                     <div class="container-user-basket | d-flex | w-25 | ms-4 | fw-semibold | justify-content-end">
@@ -52,33 +55,44 @@
                 </div>
             </div>
         </nav>
-        <div class="container-img-header-contact | w-100 | d-flex | flex-column | justify-content-center | text-white | fw-bold | p-5">
+
+        <div
+            class="container-img-header-contact | w-100 | d-flex | flex-column | justify-content-center | text-white | fw-bold | p-5">
             <h2>Contact with us</h2>
         </div>
     </header>
 
-    <main>
+    <main class="pb-5">
         <section class="w-100">
-            <header class="header-contact | p-5 | text-center | fs-3 | fw-semibold">We'd love to hear from you! If you have any questions, suggestions or just want to share your thoughts while you enjoy your coffee, we're here for you - let's talk, like two friends over coffee!</header>
-            <div class="container-form-map | w-100 | d-flex | justify-content-center">
-                <div class="container-form-contact | w-50 | text-white | p-2">
-                    <form class="ps-2 pe-2 pt-3">
+            <div class="mb-5">
+                <div class="underline-header | m-auto | pt-5 | pb-1">
+                    <h2 class="fs-1 | fw-bold | text-uppercase ">Hello Coffee-lover!</h2>
+                </div>
+                <p class="paragraph-contact | pt-4 | pb-5 | m-auto | text-start | fs-4 | fw-light">We'd love to hear
+                    from you! If you have any questions,
+                    suggestions or just want to share your thoughts while you enjoy your coffee, we're here for you -
+                    let's talk, like two friends over coffee!</p>
+            </div>
+
+            <div class="container-form-map | m-auto | d-flex | justify-content-center | mb-5">
+                <div class="container-form-contact | text-white | p-2">
+                    <form class="p-4">
                         <fieldset class="d-flex | flex-column | mb-4">
                             <p>Select one of the following options according to our types of inquiries.</p>
-                            
-                            <div class="d-flex | justify-content-center | justify-content-between | flex-wrap">
+
+                            <div class="d-flex | justify-content-between | flex-wrap">
                                 <div>
                                     <input type="radio" name="optionscontact" value="Consultation"> Consultation
                                 </div>
-                                
+
                                 <div>
                                     <input type="radio" name="optionscontact" value="suggestions"> Suggestion
                                 </div>
-    
+
                                 <div>
                                     <input type="radio" name="optionscontact" value="Complaint"> Complaint
                                 </div>
-                                
+
                                 <div>
                                     <input type="radio" name="optionscontact" value="Complied"> Complied
                                 </div>
@@ -87,41 +101,49 @@
 
                         <fieldset class="d-flex | flex-column | mb-4">
                             <label for="fullnamecontact">Full name:</label>
-                            <input type="text" name="fullnamecontact" id="fullnamecontact" placeholder="John Doe" minlength="6" maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1" required>
+                            <input type="text" name="fullnamecontact" id="fullnamecontact" placeholder="John Doe"
+                                minlength="6" maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1"
+                                required>
                         </fieldset>
 
                         <fieldset class="d-flex | flex-column | mb-4">
                             <label for="emailcontact">Email address:</label>
-                            <input type="email" name="emailcontact" id="emailcontact" placeholder="johndoe@gmail.com" minlength="6" maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1" required>
+                            <input type="email" name="emailcontact" id="emailcontact" placeholder="johndoe@gmail.com"
+                                minlength="6" maxlength="40" class="mt-1 | rounded-2 | border | border-none | p-1"
+                                required>
                         </fieldset>
 
                         <fieldset class="d-flex | flex-column | mb-4">
                             <label for="messagecontact">Message:</label>
-                            <textarea name="messagecontact" id="messagecontact" cols="30" rows="10" placeholder="Your message" class="mt-1 | rounded-2 | border | border-none | p-1" required></textarea>
+                            <textarea name="messagecontact" id="messagecontact" cols="30" rows="10"
+                                placeholder="Your message" class="mt-1 | rounded-2 | border | border-none | p-1"
+                                required></textarea>
                         </fieldset>
                     </form>
                     <div class="w-75 | d-flex | justify-content-center | align-items-center | m-auto | pb-2">
                         <button class="button-send | p-2 | text-decoration-none | fw-bold">Send</button>
                     </div>
                 </div>
-                <div class="container-maps |  w-50">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43027.202133967534!2d-122.32354302996804!3d47.62224083525004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014f2b55a9f33%3A0x79290e672b398fb9!2sStarbucks!5e0!3m2!1ses-419!2sar!4v1692583313190!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe-map | w-100 | h-100"></iframe>
+                <div class="container-maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43027.202133967534!2d-122.32354302996804!3d47.62224083525004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014f2b55a9f33%3A0x79290e672b398fb9!2sStarbucks!5e0!3m2!1ses-419!2sar!4v1692583313190!5m2!1ses-419!2sar"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        class="iframe-map | w-100 | h-100"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="text-center | text-lg-start | mt-5" style="background-color: #223835; color: #f2eeec;">
+    <footer class="text-center | text-lg-start" style="background-color: #223835; color: #f2eeec;">
 
         <div class="container | p-4 | pb-0 | mb-3">
 
             <div class="row">
 
-                <div class="col-md-3 | col-lg-3 | col-xl-3 | mx-auto | mt-3">
+                <div class="container-hours | col-md-3 | col-lg-3 | col-xl-3 | mx-auto | mt-3 | text-start">
                     <h4 class="text-uppercase | mb-4">Hours of Operation</h4>
-
-                    <table class="text-center | text-white | m-auto">
-                        <tbody class="font-weight-normal | text-start">
+                    <table class="text-white">
+                        <tbody class="font-weight-normal">
                             <tr class="border-bottom">
                                 <td>Mon - Fri:</td>
                                 <td>09:00 - 23:00</td>
@@ -142,18 +164,20 @@
                 <div class="col-md-3 | col-lg-2 | col-xl-2 | mx-auto | mt-3  | text-center">
                     <h5 class="text-uppercase mb-4 font-weight-bold">Follow us on social networks</h5>
                     <div class="contenedor-sociales d-flex justify-content-center flex-row flex-wrap">
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | flex-wrap | m-1 | p-2"
+                            href="https://www.facebook.com/" role="button">
+                            <span class="iconify" data-icon="ic:sharp-facebook"></span>
+                        </a>
 
-                        <a class="btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | flex-wrap | m-1 | p-2"
-                            href="https://www.facebook.com/" role="button"><span class="iconify"
-                                data-icon="ic:sharp-facebook"></span></a>
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://www.instagram.com/" role="button">
+                            <span class="iconify" data-icon="prime:instagram"></span>
+                        </a>
 
-                        <a class="btn btn-outline-light btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
-                            href="https://www.instagram.com/" role="button"><span class="iconify"
-                                data-icon="prime:instagram"></span></a>
-
-                        <a class="btn btn-outline-light btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
-                            href="https://web.whatsapp.com/" role="button"><span class="iconify"
-                                data-icon="ic:round-whatsapp"></span></a>
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://web.whatsapp.com/" role="button">
+                            <span class="iconify" data-icon="ic:round-whatsapp"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -169,4 +193,5 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
