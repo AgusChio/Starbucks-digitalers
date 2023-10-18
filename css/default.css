@@ -1,0 +1,36 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+/* Estilos scrollbar */
+@import url("./scroll-bar.css");
+
+/* Estilos Navbar */
+@import url("./navbar.css");
+
+/* Estilos Header */
+@import url("./header.css");
+
+/* Estilos Home */
+@import url("./home.css");
+
+/* Estilos Register */
+@import url("./register.css");
+
+/* Estilos Contact */
+@import url("./contact.css");
+
+/* Estilos About-us */
+@import url("./about-us.css");
+
+/* Estilos Footer */
+@import url("./footer.css");
+
+/* Estilos Section Card */
+@import url("./section-card.css");
+
+/* Estilos section Membership */
+@import url("./section-membership.css");
+
+/* Estilos Media Query */
+@import url("./media-query.css");

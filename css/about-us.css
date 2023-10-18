@@ -1,0 +1,139 @@
+.container-img-header-about-us {
+    height: 80vh;
+    margin-top: 0rem;
+    background-image: url("../assets/image/img-about-us-header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-img-header-about-us h2 {
+    font-size: 5rem;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 5px;
+    text-shadow: 10px 0px 10px #0f0b0995;
+}
+
+.container-img-header-about-us p {
+    font-family: 'Merriweather', serif;
+    letter-spacing: 2px;
+    text-shadow: 15px 5px 30px #0f0b09;
+}
+
+.container-img-header-about-us header {
+    width: 45%;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 5px;
+    text-shadow: 15px 5px 30px #0f0b09;
+}
+
+.underline-about-us {
+    border-bottom: 2px solid var(--text-color);
+}
+
+.title-history-logo {
+    letter-spacing: 2px;
+}
+
+.container-paragraph-image-about-us {
+    height: fit-content;
+}
+
+.img-moby-dick {
+    height: 35vh;
+    padding: 10px;
+}
+
+.img-history-logo {
+    background-color: var(--bg-color);
+    box-shadow: 10px 8px 20px #412d2534;
+}
+
+
+
+#card-container {
+    margin-top: 50px;
+    width: 1050px;
+    height: 400px;
+    position: relative;
+}
+
+#card {
+    animation: backAn 30s infinite;
+    color: #fff;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    background: url(../assets/image/bg-card-about-us.jpg) 100% center;
+    box-shadow:
+        0px 45px 100px rgba(0, 0, 0, .4),
+        inset 0 0 0 1000px #06553855;
+}
+
+#card .text-block {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0px 3px 10px rgba(0, 0, 0, .7)
+}
+
+#card .text-block p {
+    font-weight: 300;
+    width: 60%;
+    color: #FFFFFF;
+}
+
+#card-container .pg {
+    position: absolute;
+    height: 450px;
+    width: 40%;
+    right: -31px;
+    bottom: 0px;
+    z-index: 2
+}
+
+#card-container .pg>img {
+    height: 450px;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .2) 60%);
+    z-index: 1;
+}
+
+.social-link-dev {
+    border: solid 1px #FFFFFF;
+    color: #FFFFFF;
+    transition: all 0.3ms ease-in-out;
+}
+
+.social-link-dev:hover {
+    background-color: #FFFFFF;
+    color: var(--text-color);
+    animation: moveUp 0.2s ease-in-out forwards;
+}
+
+@keyframes backAn {
+    0% {
+        background-size: 100%
+    }
+
+    50% {
+        background-size: 150%
+    }
+
+    100% {
+        background-size: 100%
+    }
+}
+
+

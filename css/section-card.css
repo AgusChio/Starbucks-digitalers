@@ -1,0 +1,130 @@
+.container-all-cards {
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+}
+
+.card,
+.card-hot-coffee {
+    position: relative;
+    width: 400px;
+    height: 280px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-hot-coffee img {
+    width: 160px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.card-hot-coffee:hover img {
+    left: 80%;
+}
+
+.card-hot-coffee .content {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding: 40px 10px 20px 20px;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.card-hot-coffee:hover .content {
+    opacity: 1;
+    visibility: visible;
+    left: 0%;
+}
+
+.underline-card {
+    border-bottom: 2px dashed var(--third-color);
+}
+
+.card-hot-coffee .content h2 {
+    text-transform: uppercase;
+    color: var(--third-color);
+    line-height: 1em;
+}
+
+.card-hot-coffee .content p {
+    color: var(--third-color);
+    margin: 10px 0;
+}
+
+.card-hot-coffee .content a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 10px;
+    background: var(--third-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.card img {
+    width: 120px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.card:hover img {
+    left: 80%;
+}
+
+.card .content {
+    position: relative;
+    width: 62%;
+    left: 10%;
+    padding: 20px 10px 20px 20px;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.card:hover .content {
+    opacity: 1;
+    visibility: visible;
+    left: -20%;
+}
+
+.card .content h2 {
+    text-transform: uppercase;
+    color: var(--third-color);
+    line-height: 1em;
+}
+
+.card .content p {
+    color: var(--third-color);
+    margin: 10px 0;
+}
+
+.card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 10px;
+    background: var(--third-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

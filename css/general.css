@@ -1,0 +1,24 @@
+@import url("./default.css");
+
+* {
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary-color: #223835;
+    --secondary-color: #558E62;
+    --third-color: #E6E5DA;
+    --bg-color: #f2eeec;
+    --text-color: #0a1110;
+    --text-color2: #07794F;
+    --text-color3: #065538;
+    --bg-color-register: #412d25;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+}
