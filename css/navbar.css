@@ -11,18 +11,22 @@ nav {
     width: 30%;
 }
 
+.navbar-nav{
+    width: 57%;
+}
+
 .nav-link {
-    color: var(--text-color);
-    background-image: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: 0% 3px;
-    background-position: left bottom;
-    transition: background-size 600ms ease-in-out;
+    color: var(--text-color) !important;
+    background-image: linear-gradient(90deg, var(--secondary-color), var(--primary-color)) !important;
+    cursor: pointer !important;
+    background-repeat: no-repeat !important;
+    background-size: 0% 3px !important;
+    background-position: left bottom !important;
+    transition: background-size 600ms ease-in-out !important;
 }
 
 .nav-link:hover {
-    background-size: 100% 3px;
+    background-size: 100% 3px !important;
 }
 
 .button-signUp {

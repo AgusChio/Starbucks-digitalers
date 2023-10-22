@@ -1,0 +1,67 @@
+/* Agrega este bloque de estilos al final de tu archivo CSS general */
+.container-admin-main {
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+
+.letter-spacing {
+    letter-spacing: 2px;
+}
+
+.bg-admin-title {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn-outline-green {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-green:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--bg-color) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-product {
+    border: var(--primary-color) 2px solid;
+}
+
+table {
+    background-color: #1b302cdd;
+    color: var(--bg-color);
+    width: 95%;
+    border-radius: 20px 20px 40px 40px;
+}
+
+thead{
+    border-bottom: 2px solid var(--bg-color) !important;
+}
+
+table tbody {
+    background-color: #1b302cdd;
+    color: var(--bg-color);
+}
+
+.table-image img {
+    width: 50%;
+}
+
+.table-image{
+    display: flex;
+    justify-content: center;
+}
+
+tbody, td, th, thead, tr{
+    padding: 20px;
+}
+
+.border-right-dashed{
+    border-right: 2px dashed var(--bg-color) !important;
+}
+
+.border-bottom-solid{
+    border-bottom: 2px solid var(--bg-color) !important;
+}

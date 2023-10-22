@@ -34,3 +34,6 @@
 
 /* Estilos Media Query */
 @import url("./media-query.css");
+
+/* Estilos Admin products */
+@import url("./admin-products.css");
