@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks | Administrator</title>
+    <link rel="stylesheet" href="../../css/general.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar | navbar-expand-lg | p-4 | fixed-top">
+            <div class="container-fluid | w-100 | d-flex">
+                <div class="container-navbar">
+                    <a class="navbar-brand | fw-semibold | fs-3" href="./index.html">
+                        <img src="/assets/image/starbucks-logo.png" alt="Logo" width="60" height="60"
+                            class="starbucks-logo">
+                        Starbucks
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse | navbar-collapse | justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav | fs-5 | fw-bold | d-flex | justify-content-center | align-items-center ">
+                        <li class="nav-item | me-2">
+                            <a class="nav-link"
+                                href="./admin-products.html">Products</a>
+                        </li>
+                        <li class="nav-item | me-2">
+                            <a class="nav-link | pt-1 | pb-1 | rounded-1 | active" href="./admin-users.html">Users</a>
+                        </li>
+                    </ul>
+
+                    <div
+                        class="container-user-basket | d-flex | w-25 | ms-5 | fw-semibold | justify-content-center | align-items-center">
+                        <a href="#"
+                            class="d-flex | justify-content-center | align-items-center | flex-column | text-decoration-none | ancor-user | me-5"><span
+                                class="iconify" data-icon="mingcute:user-4-line"></span>John Doe</a>
+                        <a href="#" class="text-decoration-none | btn | btn-outline-danger">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-admin-main">
+        <div class="w-100 | p-5 | text-center | letter-spacing | bg-admin-title">
+            <h1 class="fs-2 | text-uppercase | fw-bold">User Manager</h1>
+        </div>
+
+        <div class="w-100 | d-flex | justify-content-between | align-items-center | p-5">
+            <div class="w-75 | d-flex | justify-content-end | gap-4">
+                <div id="categoryRadioButtons" class="d-flex | gap-3 | align-items-center">
+                    <label class="fw-bold">
+                        <input type="radio" name="category" value="" checked>
+                        All
+                    </label>
+                    <label class="fw-bold">
+                        <input type="radio" name="category" value="Administrator">
+                        Administrator
+                    </label>
+                    <label class="fw-bold">
+                        <input type="radio" name="category" value="User">
+                        User
+                    </label>
+                </div>
+                <input class="w-50 | p-2 | rounded-2 | search-product" type="search" id="search-product"
+                    placeholder="Search User">
+            </div>
+        </div>
+
+        <div class="w-100 | container-table table-responsive">
+            <table class="m-auto">
+                <thead>
+                    <tr class="text-center | letter-spacing">
+                        <th class="border-right-dashed">User</th>
+                        <th class="border-right-dashed">Email</th>
+                        <th class="border-right-dashed">Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-users">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="text-center | text-lg-start" style="background-color: #223835; color: #f2eeec;">
+        <div class="container | p-4 | pb-0 | mb-3">
+
+            <div class="row">
+
+                <div class="container-hours | col-md-3 | col-lg-3 | col-xl-3 | mx-auto | mt-3 | text-start">
+                    <h4 class="text-uppercase | mb-4">Hours of Operation</h4>
+                    <table class="text-white">
+                        <tbody class="font-weight-normal">
+                            <tr class="border-bottom">
+                                <td>Mon - Fri:</td>
+                                <td>09:00 - 23:00</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td>Sat - Sun </td>
+                                <td>10:00 - 20:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-4 | col-lg-3 | col-xl-3 | mx-auto | mt-3">
+                    <h4 class="text-uppercase | mb-4 | font-weight-bold | ms-2">Starbucks</h4>
+                    <img src="../../assets/image/starbucks-logo.png" alt="Starbucks Logo" class="logo-footer-starbucks">
+                </div>
+
+                <div class="col-md-3 | col-lg-2 | col-xl-2 | mx-auto | mt-3 | text-center">
+                    <h5 class="text-uppercase | mb-4 | font-weight-bold">Follow us on social networks</h5>
+                    <div class="contenedor-sociales | d-flex | justify-content-center | flex-row | flex-wrap">
+
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://www.facebook.com/Starbucks" role="button" target="_blank">
+                            <span class="iconify" data-icon="ic:sharp-facebook"></span>
+                        </a>
+
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="https://www.instagram.com/starbucks/" role="button" target="_blank">
+                            <span class="iconify" data-icon="prime:instagram"></span>
+                        </a>
+
+                        <a class="social-link | btn | btn-outline-light | btn-floating | d-flex | justify-content-center | align-items-center | m-1 | p-2"
+                            href="mailto:starbucksPrueba2.0@gmail.com" role="button" target="_blank"><span
+                                class="iconify" data-icon="material-symbols:mail-rounded"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center | p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:<a class="text-white">Starbucks - Agustina Chiodini</a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="../../javaScript/admin-users.js"></script>
+</body>
+
+</html>
