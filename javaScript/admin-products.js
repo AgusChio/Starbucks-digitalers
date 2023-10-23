@@ -127,10 +127,14 @@ if (JSON.parse(localStorage.getItem("coffee")) === null) {
 }
 
 let idEdit;
+let modalTitle = document.getElementById("coffeModalLabel");
+let isEditing = false;
 const btnSubmit = document.querySelector('button.btn[type="submit"]')
 const tableBodyHTML = document.querySelector("#table-body-products")
 const inputFilterProduct = document.getElementById("search-product")
 const formNewProduct = document.getElementById("formProduct")
+const selectCategory = document.getElementById("CategoryProducts");
+
 loadProductCoffee(coffee)
 
 function loadProductCoffee(arrayCoffee) {
@@ -149,8 +153,12 @@ function loadProductCoffee(arrayCoffee) {
                 <td class="border-right-dashed">${coffee.category}</td>
                 <td>
                 <div class="d-flex | gap-2 | align-items-center | justify-content-center | h-100">
-                <button class="btn | btn-outline-light" onclick="editProduct('${coffee.id}')"><span class="iconify" data-icon="uil:edit"></span></button>
-                    <button class="btn | btn-outline-danger" onclick="deleteProduct('${coffee.id}')"><span class="iconify" data-icon="ion:trash"></span></button>
+                <button class="btn | btn-outline-light" data-bs-toggle="modal" data-bs-target="#editModal" onclick="editProduct('${coffee.id}')">
+                    <span class="iconify" data-icon="uil:edit"></span>
+                </button>
+                <button class="btn | btn-outline-danger" onclick="deleteProduct('${coffee.id}')">
+                    <span class="iconify" data-icon="ion:trash"></span>
+                </button>
                 </div>
                 </td>
             </tr>
@@ -159,22 +167,85 @@ function loadProductCoffee(arrayCoffee) {
 }
 
 
+function addNewProduct() {
+    const newName = document.getElementById("newName").value;
+    const newImage = document.getElementById("newImage").value;
+    const newDescription = document.getElementById("newDescription").value;
+    const newPrice = document.getElementById("newPrice").value;
+    const newPoints = document.getElementById("newPoints").value;
+    const newCategory = document.getElementById("newCategory").value;
 
-function addNewProduct(name, image, description, price, points, category, dateOfEntry) {
+    if (!newName) {
+        showErrorMessage("Name");
+        return;
+    } else if (!newImage) {
+        showErrorMessage("Image");
+        return;
+    } else if (!newDescription) {
+        showErrorMessage("Description");
+        return;
+    } else if (!newPrice) {
+        showErrorMessage("Price");
+        return;
+    } else if (!newPoints) {
+        showErrorMessage("Points");
+        return;
+    } else if (!newCategory) {
+        showErrorMessage("Category");
+        return;
+    }
+
+    const currentDate = new Date().toISOString().slice(0, 10);
+
     const newProduct = {
         id: generateUUID(),
-        name: name,
-        image: image,
-        description: description,
-        price: parseFloat(price),
-        points: parseInt(points),
-        dateOfEntry: dateOfEntry,
-        category: category
+        name: newName,
+        image: newImage,
+        description: newDescription,
+        price: parseFloat(newPrice),
+        points: parseInt(newPoints),
+        dateOfEntry: currentDate,
+        category: newCategory
     };
 
     coffee.push(newProduct);
     localStorage.setItem("coffee", JSON.stringify(coffee));
     loadProductCoffee(coffee);
+
+    showSuccessMessage();
+    window.location.reload();
+}
+
+function showErrorMessage(field) {
+    Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `Please fill in the ${field} field.`
+    });
+}
+
+function showSuccessMessage() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: 'The product has been successfully added.'
+    });
+}
+
+function showErrorMessage(field) {
+    Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `Por favor completa el campo ${field}.`
+    });
+}
+
+function showSuccessMessage() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'El producto se ha agregado exitosamente.'
+    });
 }
 
 function generateUUID() {
@@ -187,54 +258,108 @@ function generateUUID() {
     return uuid;
 }
 
-formNewProduct.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const name = document.getElementById("nameProduct").value;
-    const image = document.getElementById("image").value;
-    const description = document.getElementById("descripcionProducto").value;
-    const price = document.getElementById("priceProduct").value;
-    const points = document.getElementById("pointProduct").value;
-    const category = document.getElementById("CategoryProducts").value;
-    const dateOfEntry = new Date().toISOString().slice(0, 10);
 
-    if (name === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in the Name field!',
-        });
-    } else if (image === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in the Image URL field!',
-        });
-    } else if (description === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in the Description field!',
-        });
-    } else if (price === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in the Price field!',
-        });
-    } else if (points === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please fill in the Points field!',
-        });
-    } else if (category === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please select a Category!',
+
+function filterProducts() {
+    const searchTerm = inputFilterProduct.value.toLowerCase();
+    const selectedCategory = Array.from(document.querySelectorAll('input[name="category"]:checked'))[0].value;
+    let filteredCoffee = coffee;
+
+    if (searchTerm) {
+        filteredCoffee = filteredCoffee.filter(coffeeItem => {
+            return coffeeItem.name.toLowerCase().includes(searchTerm) && coffeeItem.category === selectedCategory;
         });
     } else {
-        addNewProduct(name, image, description, price, points, category, dateOfEntry);
-        this.reset();
+        if (selectedCategory !== "") {
+            filteredCoffee = filteredCoffee.filter(coffeeItem => {
+                return coffeeItem.category === selectedCategory;
+            });
+        }
     }
+
+    loadProductCoffee(filteredCoffee);
+}
+
+inputFilterProduct.addEventListener("keyup", filterProducts);
+
+const categoryRadioButtons = document.querySelectorAll('input[name="category"]');
+categoryRadioButtons.forEach(radioButton => {
+    radioButton.addEventListener("change", filterProducts);
 });
+
+function editProduct(id) {
+    isEditing = true;
+    idEdit = id;
+    modalTitle.textContent = "Edit Product";
+
+    const productToEdit = coffee.find(item => item.id === id);
+    if (productToEdit) {
+        document.getElementById("editName").value = productToEdit.name;
+        document.getElementById("editImage").value = productToEdit.image;
+        document.getElementById("editDescription").value = productToEdit.description;
+        document.getElementById("editPrice").value = productToEdit.price;
+        document.getElementById("editPoints").value = productToEdit.points;
+        document.getElementById("editCategory").value = productToEdit.category;
+    }
+
+    const btnSubmitModal = document.querySelector('#editModal .modal-footer button[type="button"]');
+    btnSubmitModal.onclick = saveProductChanges;
+}
+
+function saveProductChanges() {
+    const editedName = document.getElementById("editName").value;
+    const editedImage = document.getElementById("editImage").value;
+    const editedDescription = document.getElementById("editDescription").value;
+    const editedPrice = document.getElementById("editPrice").value;
+    const editedPoints = document.getElementById("editPoints").value;
+    const editedCategory = document.getElementById("editCategory").value;
+
+    const indexToEdit = coffee.findIndex(item => item.id === idEdit);
+
+    if (indexToEdit !== -1) {
+        coffee[indexToEdit].name = editedName;
+        coffee[indexToEdit].image = editedImage;
+        coffee[indexToEdit].description = editedDescription;
+        coffee[indexToEdit].price = parseFloat(editedPrice);
+        coffee[indexToEdit].points = parseInt(editedPoints);
+        coffee[indexToEdit].category = editedCategory;
+
+        localStorage.setItem("coffee", JSON.stringify(coffee));
+
+        loadProductCoffee(coffee);
+
+        window.location.reload();
+    }
+}
+
+function deleteProduct(id) {
+    const indexToDelete = coffee.findIndex(item => item.id === id);
+
+    if (indexToDelete !== -1) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'You will not be able to recover this product!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, keep it'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                coffee.splice(indexToDelete, 1);
+                localStorage.setItem("coffee", JSON.stringify(coffee));
+                loadProductCoffee(coffee);
+                Swal.fire(
+                    'Deleted!',
+                    'Your product has been deleted.',
+                    'success'
+                );
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Cancelled',
+                    'Your product is safe :)',
+                    'error'
+                );
+            }
+        });
+    }
+}
