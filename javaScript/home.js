@@ -1,7 +1,7 @@
-let storedProducts = JSON.parse(localStorage.getItem("products")) || coffeeFirstCharge;
+let storedProducts = JSON.parse(localStorage.getItem("coffee")) || coffeeFirstCharge;
 
-if (JSON.parse(localStorage.getItem("products")) === null) {
-    localStorage.setItem("products", JSON.stringify(storedProducts));
+if (JSON.parse(localStorage.getItem("coffee")) === null) {
+    localStorage.setItem("coffee", JSON.stringify(storedProducts));
 }
 
 function filterProductsByType(products, type) {
