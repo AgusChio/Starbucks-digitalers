@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const confirmPassword = document.getElementById('confirmpassword').value;
         const fullname = document.getElementById('fullname').value;
         const datebirth = document.getElementById('datebirth').value;
-        const provincia = document.getElementById('provincia').value;
+        const province = document.getElementById('provincia').value;
         const observations = document.getElementById('observations').value;
 
         if (password !== confirmPassword) {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Las contraseñas no coinciden!',
+                text: 'Passwords do not match!',
             });
             return;
         }
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Ya existe un usuario con ese correo!',
+                text: 'A user with that email already exists!',
             });
             return;
         }
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             email: email,
             fullname: fullname,
             datebirth: datebirth,
-            provincia: provincia,
+            province: province,
             observations: observations
         };
 
@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         localStorage.setItem('users', JSON.stringify(users));
-        localStorage.setItem('currentUser', JSON.stringify(newUser)); 
+        localStorage.setItem('currentUser', JSON.stringify(newUser));
 
         Swal.fire({
-            title: 'Registrado!',
-            text: 'Has sido registrado exitosamente.',
+            title: 'Registered!',
+            text: 'You have been successfully registered.',
             icon: 'success',
             confirmButtonText: 'OK'
         }).then((result) => {
