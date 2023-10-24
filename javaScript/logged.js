@@ -1,6 +1,6 @@
-
 const nonLoggedButtons = document.getElementById("nonLoggedButtons");
 const loggedContent = document.getElementById("loggedContent");
+const userDisplayName = document.getElementById("userDisplayName");
 
 function checkLoginStatus() {
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -11,6 +11,10 @@ function checkLoginStatus() {
     if (currentUser !== null) { 
         nonLoggedButtons.style.display = "none"; 
         loggedContent.style.display = "flex"; 
+
+        if (currentUser.fullname) {
+            userDisplayName.textContent = currentUser.fullname;
+        }
 
         if (currentUser.role === "Administrator") {
             adminProducts.style.display = "block";

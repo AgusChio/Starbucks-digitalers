@@ -1,13 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     const form = document.querySelector('form');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        
+
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmpassword').value;
+        const fullname = document.getElementById('fullname').value;
+        const datebirth = document.getElementById('datebirth').value;
+        const provincia = document.getElementById('provincia').value;
+        const observations = document.getElementById('observations').value;
 
         if (password !== confirmPassword) {
             Swal.fire({
@@ -33,12 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const newUser = {
             email: email,
-            password: password // NOTA: No es seguro almacenar contraseñas en el localStorage en aplicaciones reales.
+            fullname: fullname,
+            datebirth: datebirth,
+            provincia: provincia,
+            observations: observations
         };
-        users.push(newUser);
-        localStorage.setItem('users', JSON.stringify(users));
 
-        localStorage.setItem('currentUser', JSON.stringify(newUser));
+        users.push({
+            ...newUser,
+            password: password
+        });
+
+        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('currentUser', JSON.stringify(newUser)); 
 
         Swal.fire({
             title: 'Registrado!',
@@ -47,10 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.isConfirmed) {
-                // Redirigir al usuario a index.html
                 window.location.href = "/index.html";
             }
         });
-
     });
 });

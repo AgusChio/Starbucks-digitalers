@@ -62,20 +62,6 @@
     margin: 10px 0;
 }
 
-.card-hot-coffee .content a {
-    position: relative;
-    display: inline-block;
-    padding: 5px 12px;
-    border-radius: 10px;
-    background: var(--third-color);
-    text-decoration: none;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-
 .card img {
     width: 120px;
     height: 300px;
@@ -116,7 +102,7 @@
     margin: 10px 0;
 }
 
-.card .content a {
+.card .content button, .card-hot-coffee .content button {
     position: relative;
     display: inline-block;
     padding: 5px 12px;
