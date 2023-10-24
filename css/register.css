@@ -39,13 +39,9 @@
 }
 
 form select option {
-    background-color: var(--bg-color-register) !important;
-    color: #FFFFFF !important;
+    background-color: var(--bg-color) !important;
+    color: #000000 !important;
     transition: 0.3s all linear;
-}
-
-input[type="select"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
 }
 
 .container-img-form-register {

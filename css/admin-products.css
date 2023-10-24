@@ -29,18 +29,18 @@
     border: var(--primary-color) 2px solid;
 }
 
-table {
+.table-admin {
     background-color: #1b302cdd;
     color: var(--bg-color);
     width: 95%;
     border-radius: 20px 20px 40px 40px;
 }
 
-thead{
+.table-admin thead{
     border-bottom: 2px solid var(--bg-color) !important;
 }
 
-table tbody {
+.table-admin tbody {
     background-color: #1b302cdd;
     color: var(--bg-color);
 }
