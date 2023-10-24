@@ -11,9 +11,6 @@ function filterProductsByType(products, type) {
 let hotProducts = filterProductsByType(storedProducts, 'Hot');
 let iceProducts = filterProductsByType(storedProducts, 'Ice');
 
-console.log(hotProducts);
-console.log(iceProducts);
-
 function renderProducts(products, containerId, isHot) {
     const container = document.querySelector(`#${containerId}`);
     container.innerHTML = '';

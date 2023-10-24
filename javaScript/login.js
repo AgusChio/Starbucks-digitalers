@@ -44,7 +44,9 @@ loginForm.addEventListener("submit", (event) => {
         return;
     }
 
+    localStorage.setItem("currentUser", JSON.stringify(userExist));
     Swal.fire("Login Successful", "You will be redirected shortly", "success");
+
 
     setTimeout(function () {
         if (userExist.role === "Administrator") {
