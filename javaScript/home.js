@@ -150,7 +150,7 @@ function renderProducts(products, containerId, isHot) {
                     </div>
                     <p class="fs-6">${description}</p>
                     <p class="fs-5 | p-0 | m-0">$${product.price} USD</p>
-                    <p class="fs-6 | p-0 | m-0">${product.date}</p>
+                    <p class="fs-6 | p-0 | m-0">${product.dateOfEntry}</p>
                     <div class="w-100 | d-flex | justify-content-between | p-3">
                         <button onclick="event.preventDefault(); showProductDetails(${JSON.stringify(product).split('"').join('&quot;')})">Read More</a>
                         <button><span class="iconify" data-icon="emojione-monotone:shopping-cart"></span> </span></button>
@@ -169,6 +169,7 @@ function showProductDetails(product) {
     document.getElementById('productPrice').textContent = "$" + product.price + " USD";
     document.getElementById('productImage').src = product.image;
     document.getElementById('productImage').alt = product.name;
+    document.getElementById('productPoints').innerHTML = '<span class="iconify" data-icon="solar:star-bold"></span>' + product.points + ' points';
 
     const modal = new bootstrap.Modal(document.getElementById('productModal'));
     modal.show();

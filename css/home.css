@@ -14,3 +14,32 @@
     width: 90%;
     border-bottom: 3px solid var(--text-color);
 }
+
+.modal-dialog {
+    max-width: 45%;  
+    height: auto;   
+}
+
+.modal-content{
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--bg-color);
+}
+
+.btn-add{
+    background-color: #a79086;
+}
+
+.btn-cancel{
+    background-color: var(--bg-color);
+    color: #000000;
+}
+
+.btn-add:hover{
+    background-color: #a79086;
+    color: var(--bg-color);
+}
+
+.btn-cancel:hover{
+    background-color: var(--bg-color);
+    color: #000000;
+}

@@ -137,22 +137,32 @@
             </div>
         </section>
 
+
         <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="productModalLabel">Producto</h5>
+                        <h5 class="modal-title" id="productModalLabel">Product</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img id="productImage" class="img-fluid mb-3" src="#" alt="Producto">
-                        <h6 id="productName"></h6>
-                        <p id="productDescription"></p>
-                        <p id="productPrice"></p>
+                        <div class="row">
+                            <div class="col-md-6 | p-3 d-flex justify-content-center">
+                                <img id="productImage" class="img-fluid mb-3" src="#" alt="Producto">
+                            </div>
+                            <div class="col-md-6">
+                                <h6 id="productName"></h6>
+                                <p id="productDescription"></p>
+                                <div class="d-flex | gap-3">
+                                    <p id="productPrice"></p>
+                                    <p id="productPoints" class="d-flex align-items-center gap-2"></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button id="addToCartButton" type="button" class="btn btn-primary">Agregar al carrito</button>
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Close</button>
+                        <button id="addToCartButton" type="button" class="btn btn-add">Add <span class="iconify" data-icon="emojione-monotone:shopping-cart"></span></button>
                     </div>
                 </div>
             </div>
