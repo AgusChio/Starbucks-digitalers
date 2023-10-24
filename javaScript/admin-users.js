@@ -1,17 +1,8 @@
-let users = [{
-    id: '680244b7-59b4-47f5-9885-479cd9f298fc',
-    name: 'Administrator',
-    email: 'admin@admin.com',
-    role: 'Administrator',
-    creationDate: '2023-12-10',
-},
-{
-    id: 'd6f73559-cfad-410b-871c-f547bb9094c5',
-    name: 'Agustina Chiodinni',
-    email: 'aguschio@gmail.com',
-    role: 'User',
-    creationDate: '2023-12-10',
-}];
+const users =JSON.parse(localStorage.getItem("users"))|| usersFirtsCharge
+if( JSON.parse(localStorage.getItem("users")) === null){
+    localStorage.setItem("users",JSON.stringify(usersFirtsCharge))
+}
+
 
 function loadUserTable(users) {
     const tableBody = document.getElementById('table-body-users');
